@@ -101,7 +101,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline>
         <Box minWidth={400}>
-          <AppBar position="relative" color="inherit">
+          <AppBar position="relative" color="default">
             <Toolbar>
               <Typography
                 variant="h6"
