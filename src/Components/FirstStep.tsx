@@ -1,6 +1,6 @@
 import FormikMuiTextField from "./FormikMuiTextField";
 import { Grid } from "@material-ui/core";
-import Registration from "../registration";
+import { Registration } from "../Models";
 
 interface FirstStepProps {
   registration: Registration;
@@ -14,6 +14,7 @@ const FirstStep: React.FC<FirstStepProps> = (props) => {
           label="First Name"
           variant="outlined"
           fullWidth
+          autoFocus
         />
       </Grid>
       <Grid item xs={12}>

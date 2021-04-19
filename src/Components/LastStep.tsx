@@ -1,6 +1,5 @@
-import FormikMuiTextField from "./FormikMuiTextField";
 import { Grid, Typography } from "@material-ui/core";
-import Registration from "../registration";
+import { Registration } from "../Models";
 
 interface LastStepProps {
   registration: Registration;

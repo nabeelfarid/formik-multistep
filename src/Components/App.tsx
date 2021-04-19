@@ -21,8 +21,8 @@ import {
 } from "@material-ui/core";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { FirstStep, SecondStep, LastStep } from "./Components";
-import Registration from "./registration";
+import { FirstStep, SecondStep, LastStep } from ".";
+import { Registration } from "../Models";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,21 +30,6 @@ const theme = createMuiTheme({
     primary: lightBlue,
   },
 });
-
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     root: {
-//       // width: "100%",
-//     },
-//     backButton: {
-//       marginRight: theme.spacing(1),
-//     },
-//     instructions: {
-//       marginTop: theme.spacing(1),
-//       marginBottom: theme.spacing(1),
-//     },
-//   })
-// );
 
 function getSteps() {
   return [
@@ -89,7 +74,6 @@ const initialValuesRegistration: Registration = {
 };
 
 function App() {
-  // const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
 
