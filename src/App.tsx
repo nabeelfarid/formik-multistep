@@ -1,25 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { lightBlue } from "@material-ui/core/colors";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import {
+  AppBar,
+  IconButton,
+  Toolbar,
+  Typography,
+  Box,
+  Container,
+  Switch,
+  Tooltip,
+  Link,
+} from "@material-ui/core";
+import { GitHub } from "@material-ui/icons";
+
+const theme = createMuiTheme({
+  palette: {
+    type: "dark",
+    primary: lightBlue,
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <Box minWidth={400}>
+          <AppBar position="relative" color="inherit">
+            <Toolbar>
+              <Typography
+                variant="h6"
+                // style={{ color: "inherit", textDecoration: "inherit" }}
+              >
+                Formik Multi-Step Form
+              </Typography>
+              <Box flexGrow={1} />
+              <Tooltip title="Github Repo">
+                <IconButton
+                  aria-label="github"
+                  href="https://github.com/nabeelfarid/formik-multistep"
+                  target="blank"
+                >
+                  <GitHub />
+                </IconButton>
+              </Tooltip>
+            </Toolbar>
+          </AppBar>
+          <Container>
+            <Box mt={4}>
+              <div>Hello World</div>
+            </Box>
+          </Container>
+        </Box>
+      </CssBaseline>
+    </ThemeProvider>
   );
 }
 
